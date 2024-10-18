@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <img src="images/logo.jpg" alt="Maddy Cleaning Services Logo" style="width:100px; height:auto;">
+</header>
+
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Our Team - Maddy Cleaning Services</title>
+    <link rel="stylesheet" href="styles.css">
+   </head>
+<body>
+    <header>
+        <h1>Maddy Cleaning Services</h1>
+    </header>
+
+    <!-- Navigation Menu -->
+    <div class="nav">
+        <a href="index.html">Home</a>&nbsp; &nbsp; &nbsp;   
+        <div class="dropdown">
+            <a href="service.html">Services</a>&nbsp; &nbsp; &nbsp; 
+            <div class="dropdown-content">
+                <a href="residential.html">Residential Cleaning</a>
+                <a href="commercial.html">Commercial Cleaning</a>
+                <a href="endoflease.html">End of Lease Cleaning</a>
+                <a href="ndis.html">NDIS Cleaning</a>
+            </div>
+        </div>
+        <a href="pricing.html">Pricing</a>&nbsp; &nbsp; &nbsp;   
+        <a href="locations.html">Locations</a>&nbsp; &nbsp; &nbsp;   
+        <div class="dropdown">
+            <a href="aboutus.html">About Us</a>&nbsp; &nbsp; &nbsp;
+            <div class="dropdown-content">
+                <a href="team.html">Our Team</a>
+                <a href="book.html">Book Now</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="contact.html">Contact Us</a>&nbsp; &nbsp; &nbsp;    
+            <div class="dropdown-content">
+                <a href="faq.html">FAQ</a>
+                <a href="review.html">Reviews</a>
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+    </div>
+ <style>
+        /* Basic styling for the team section */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f5f5f5;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        h1 {
+            margin: 1rem 0;
+        }
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 2rem;
+        }
+        .team-member {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 250px;
+            margin: 1rem;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+        .team-member h3 {
+            margin: 0.5rem 0;
+        }
+        .team-member p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Team</h1>
+    </header>
+
+    <main>
+        <section class="team-container">
+            <div class="team-member">
+                <img src="images/mohan.png" alt="Team Member 1">
+                <h3>Mohan Shahi</h3>
+                <p>Founder & CEO</p>
+                <p>Mohan(Maddy) brings over 15 years of cleaning industry experience and a passion for client satisfaction.</p>
+            </div>
+            <div class="team-member">
+                <img src="images/samiksha.png" alt="Team Member 2">
+                <h3>Samiksha Shah</h3>
+                <p>Operations Manager</p>
+                <p>Samiksha ensures smooth daily operations and the highest standards of service for our clients.</p>
+            </div>
+            <div class="team-member">
+                <img src="images/suvan.png" alt="Team Member 3">
+                <h3>Suvan Shahi</h3>
+                <p>Lead Cleaner</p>
+                <p>Suvan’s attention to detail guarantees a spotless and welcoming environment every time.</p>
+            </div>
+            <div class="team-member">
+                <img src="images/samip.png" alt="Team Member 4">
+                <h3>Samip Shah</h3>
+                <p>Customer Relations</p>
+                <p>Samip is committed to providing excellent client support and making each interaction positive.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Maddy's Cleaning Services. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link href="java.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maddy Cleaning Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+    <script>
+        // JavaScript validation function
+        function validateBookingForm(event) {
+            // Prevent form submission if there are validation errors
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const date = document.getElementById("date").value;
+            const time = document.getElementById("time").value;
+
+            // Basic validation for name and email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (name.trim() === "") {
+                alert("Please enter your name.");
+                return false;
+            }
+
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            if (!date) {
+                alert("Please select a preferred date.");
+                return false;
+            }
+
+            if (!time) {
+                alert("Please select a preferred time.");
+                return false;
+            }
+
+            // If everything is valid, allow form submission
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+
+   

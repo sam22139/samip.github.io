@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <img src="images/logo.jpg" alt="Maddy Cleaning Services Logo" style="width:100px; height:auto;">
+</header>
+
+<head>
+    <meta charset="utf-8">
+    <link href="java.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maddy Cleaning Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+    <script>
+        // JavaScript validation function
+        function validateContactForm(event) {
+            // Prevent form submission for validation
+            event.preventDefault();
+
+            // Get form values
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            // Email regex for validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            // Validate name (not empty)
+            if (name.trim() === "") {
+                alert("Please enter your name.");
+                return false;
+            }
+
+            // Validate email using regex
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            // Validate message (not empty)
+            if (message.trim() === "") {
+                alert("Please enter your message.");
+                return false;
+            }
+
+            // If all validations pass, show success message
+            alert("Thank you! Your message has been sent successfully.");
+            // Reset form
+            document.getElementById("contact-form").reset();
+            return true;
+        }
+    </script>
+</head>
+<body>
+<header>
+    <h1>Maddy Cleaning Services</h1>
+</header>
+<!-- Navigation Menu -->
+<div class="nav">
+    <a href="index.html">Home</a>&nbsp; &nbsp; &nbsp;   
+    <div class="dropdown">
+        <a href="service.html">Services</a>&nbsp; &nbsp; &nbsp; 
+        <div class="dropdown-content">
+            <a href="residential.html">Residential Cleaning</a>
+            <a href="commercial.html">Commercial Cleaning</a>
+            <a href="endoflease.html">End of Lease Cleaning</a>
+            <a href="ndis.html">NDIS Cleaning</a>
+        </div>
+    </div>
+  
+    <a href="pricing.html">Pricing</a>&nbsp; &nbsp; &nbsp;   
+    <a href="locations.html">Locations</a>&nbsp; &nbsp; &nbsp;   
+    <div class="dropdown">
+        <a href="aboutus.html">About Us</a>&nbsp;    
+        <div class="dropdown-content">
+            <a href="team.html">Our Team</a>
+            <a href="book.html">Book Now</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <a href="contact.html">Contact Us</a>&nbsp; &nbsp; &nbsp;    
+        <div class="dropdown-content">
+            <a href="faq.html">FAQ</a>
+            <a href="review.html">Reviews</a>
+            <a href="blog.html">Blog</a>
+        </div>
+    </div>
+</div>
+
+<main>
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <p>If you have any questions, feel free to reach out!</p>
+        <form id="contact-form" onsubmit="validateContactForm(event)" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</main>
+<br/>
+ <!-- Google Maps Embed -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d338.8709709495774!2d150.8168988473946!3d-34.01970165922962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12f127f2d97d89%3A0x4eb9c891c0c9bc7b!2s9%20Fannich%20Pl%2C%20St%20Andrews%20NSW%202566%2C%20Australia!5e0!3m2!1sen!2sus!4v1697639040003!5m2!1sen!2sus" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+  <a href="faq.html">FAQ</a>&nbsp; &nbsp; &nbsp; 
+            <a href="review.html">Reviews</a>&nbsp; &nbsp; &nbsp; 
+  <a href="blog.html">Blog</a> 
+
+<footer>
+    <p>&copy; 2024 Maddy's Cleaning Services. All rights reserved.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,99 @@
+body {
+    background-color: lightyellow;
+}
+
+div {
+    background-color: lightblue;
+}
+
+header {
+    background-color: brown;
+    color: white;
+    padding: 1px;
+}
+
+footer {
+    background-color: brown;
+    color: white;
+    padding: 5px;
+}
+
+.logo {
+    width: 120px; /* Adjust size as needed */
+    height: auto;
+}
+
+
+
+
+
+
+
+#about {
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#about h1 {
+    color: #FFFFFF;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#about p {
+    color: #F0F0F0;
+    font-size: 1.1em;
+}
+
+
+
+
+/* Basic reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure the body takes up the full viewport height */
+html, body {
+    height: 100%;
+}
+
+/* Flexbox layout for the content and footer */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Content takes the remaining space, pushing the footer down */
+.content {
+    flex: 1;
+}
+
+/* Footer styling */
+footer {
+    background-color: #800000; /* Adjust the color as needed */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+  header, footer {
+            background-color: #3333;
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+
+

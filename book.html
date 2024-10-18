@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <img src="images/logo.jpg" alt="Maddy Cleaning Services Logo" style="width:100px; height:auto;">
+</header>
+
+<head>
+    <meta charset="utf-8">
+    <link href="java.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maddy Cleaning Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+    <script>
+        // JavaScript validation function
+        function validateBookingForm(event) {
+            // Prevent form submission if there are validation errors
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const date = document.getElementById("date").value;
+            const time = document.getElementById("time").value;
+
+            // Basic validation for name and email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (name.trim() === "") {
+                alert("Please enter your name.");
+                return false;
+            }
+
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            if (!date) {
+                alert("Please select a preferred date.");
+                return false;
+            }
+
+            if (!time) {
+                alert("Please select a preferred time.");
+                return false;
+            }
+
+            // If everything is valid, allow form submission
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Maddy Cleaning Services</h1>
+    </header>
+
+    <!-- Navigation Menu -->
+    <div class="nav">
+        <a href="index.html">Home</a>&nbsp; &nbsp; &nbsp;   
+        <div class="dropdown">
+            <a href="service.html">Services</a>&nbsp; &nbsp; &nbsp; 
+            <div class="dropdown-content">
+                <a href="residential.html">Residential Cleaning</a>
+                <a href="commercial.html">Commercial Cleaning</a>
+                <a href="endoflease.html">End of Lease Cleaning</a>
+                <a href="ndis.html">NDIS Cleaning</a>
+            </div>
+        </div>
+        <a href="pricing.html">Pricing</a>&nbsp; &nbsp; &nbsp;   
+        <a href="locations.html">Locations</a>&nbsp; &nbsp; &nbsp;   
+        <div class="dropdown">
+            <a href="aboutus.html">About Us</a>&nbsp; &nbsp; &nbsp;
+            <div class="dropdown-content">
+                <a href="team.html">Our Team</a>
+                <a href="book.html">Book Now</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="contact.html">Contact Us</a>&nbsp; &nbsp; &nbsp;    
+            <div class="dropdown-content">
+                <a href="faq.html">FAQ</a>
+                <a href="review.html">Reviews</a>
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section id="book-now">
+            <h1>Book Your Cleaning Service</h1>
+            <form onsubmit="return validateBookingForm(event)" method="POST" action="/submit_booking">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="service">Select Service:</label>
+                <select id="service" name="service">
+                    <option value="residential">Residential Cleaning</option>
+                    <option value="commercial">Commercial Cleaning</option>
+                    <option value="move_in_out">Move-in/Move-out Cleaning</option>
+                    <option value="NDIS">NDIS Cleaning</option>
+                </select><br>
+
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date" required><br>
+
+                <label for="time">Preferred Time:</label>
+                <input type="time" id="time" name="time" required><br>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+    </main>
+ <img src="images/book.jpeg" alt="book now" width="300" height="300">
+    <footer>
+        <p>&copy; 2024 Maddy's Cleaning Services. All rights reserved.</p>
+    </footer>
+</body>
+</html>
